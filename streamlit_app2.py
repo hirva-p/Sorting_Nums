@@ -40,3 +40,4 @@ if (n>0):
     data = pd.DataFrame(array[temp])
     st.markdown("Sorted from index 0 to index "+str(temp))
     st.bar_chart(data)
+
