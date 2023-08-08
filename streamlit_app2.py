@@ -1,15 +1,13 @@
 
 import streamlit as st
-# import matplotlib.pyplot as plt
 import pandas as pd
 
-st.title("Sorting Numbers Simulation")
+st.title("Sorting Numbers Simulation (Insertion Sort)")
 array = []
-flag = False 
+
 with st.form("my_form"):
-   text = st.text_input("Enter nums(space)",key = "real")
+   text = st.text_input("Enter numbers (space separated)",key = "real")
    submitted = st.form_submit_button("Submit")
-   flag = True
 
 arr = text.split()
 for i in range(len(arr)):
