@@ -30,14 +30,13 @@ def func(ar,temp):
             j-=1
         ar[j+1] = key
     array.append(ar)
-if (flag==True):
-    n = len(arr)
-    arr = func(arr,n-1)
-    st.subheader("Iteration control")
-    temp_options = list(range(0,n))
-    temp = st.select_slider("Choose iteration",options=temp_options)
 
+n = len(arr)
+arr = func(arr,n-1)
+st.subheader("Iteration control")
+temp_options = list(range(0,n))
+if (n>0):
+    temp = st.select_slider("Choose iteration",options=temp_options)
     data = pd.DataFrame(array[temp])
     st.markdown("Sorted from index 0 to index "+str(temp))
-
     st.bar_chart(data)
