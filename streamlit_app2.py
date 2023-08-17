@@ -1,8 +1,9 @@
 import streamlit as st
+import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import time
-# import st_autorefresh
+from streamlit_autorefresh import st_autorefresh
 
 
 st.title("Sorting Numbers Simulation")
@@ -110,7 +111,7 @@ def show_graph():
         st.session_state["cnt"] = 0
         fig = plt.figure()
         ax = fig.add_axes([0, 0, 1, 1])
-        index =  []
+        index = []
         for i in range(size):
             index.append(i)
         ax.bar(index, array[st.session_state["cnt"]][0])
@@ -160,7 +161,7 @@ placeholder = st.empty()
 
 def call_func():
     st.session_state["cnt"] = 0
-    # st.session_state["cnt"] = st_autorefresh(interval=1500, limit=staten)
+    st.session_state["cnt"] = st_autorefresh(interval=1500, limit=staten)
     show_graph()
 
 
@@ -174,7 +175,7 @@ if result == "Insertion Sort":
             st.session_state["cnt"] += 1
         if st.button("Prev"):
             st.session_state["cnt"] -= 1
-        show_graph()
+        call_func()
 
 
 if result == "Bubble Sort":
