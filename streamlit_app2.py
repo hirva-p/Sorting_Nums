@@ -111,7 +111,7 @@ def show_graph():
         st.session_state["cnt"] = 0
         fig = plt.figure()
         ax = fig.add_axes([0, 0, 1, 1])
-        index = []
+        index =  []
         for i in range(size):
             index.append(i)
         ax.bar(index, array[st.session_state["cnt"]][0])
