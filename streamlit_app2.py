@@ -3,7 +3,7 @@ import pandas as pd
 # import matplotlib.pyplot as plt
 import numpy as np
 import time
-# from streamlit_autorefresh import st_autorefresh
+import st_autorefresh
 
 
 st.title("Sorting Numbers Simulation")
