@@ -161,7 +161,7 @@ placeholder = st.empty()
 
 def call_func():
     st.session_state["cnt"] = 0
-    st.session_state["cnt"] = st_autorefresh(interval=1500, limit=staten)
+    # st.session_state["cnt"] = st_autorefresh(interval=1500, limit=staten)
     show_graph()
 
 
@@ -175,7 +175,7 @@ if result == "Insertion Sort":
             st.session_state["cnt"] += 1
         if st.button("Prev"):
             st.session_state["cnt"] -= 1
-        call_func()
+        show_graph()
 
 
 if result == "Bubble Sort":
